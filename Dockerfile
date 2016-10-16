@@ -2,6 +2,8 @@ FROM jenkins
 
 USER root
 
+RUN apt-get update && apt-get install -y sudo
+
 # Install Docker, partly from https://github.com/docker-library/docker/blob/master/1.12/Dockerfile
 ENV DOCKER_BUCKET get.docker.com
 ENV DOCKER_VERSION 1.12.0
